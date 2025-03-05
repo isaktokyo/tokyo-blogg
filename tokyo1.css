@@ -1,0 +1,162 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif; 
+    margin: 0;
+    padding: 0;
+    padding-top: 1600px;
+    background-color: #24292d;
+    color-scheme: light dark;
+        
+    /* Sentrerer containeren i midten av skjermen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Gjør at body fyller hele skjermen */
+    flex-direction: column;
+}
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #c2daf9; /* Fargeendring ved hover */
+}
+
+/* Fade-in effekt for elementer som skal animeres */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+img {
+    width: 300px;  /* Bestemt bredde */
+    height: auto;  /* Bevarer proporsjonene */
+}
+.kart {
+    width: 75%;
+    height: 300px;
+    border: 0;
+}
+
+.forsidebilde {
+    width: 300px;  /* Bestemt bredde */
+    height: auto;  /* Bevarer proporsjonene */
+}
+
+/* Hovedinnhold */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px; 
+    flood-opacity: 0.1;
+    /* Legger til fade-in */
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+h2{
+    color: #333;
+    text-align: left;
+    margin-top: 20px;
+    font-size: 10px; 
+    flood-opacity: 0.5;
+    /* Legger til fade-in */
+    animation: fadeIn 5.5s ease-in forwards;
+}
+
+.entry {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 20px;
+    padding: 20px; 
+    display: block;
+    /* Legger til fade-in */
+    animation: fadeIn 5.5s ease-in forwards;
+}
+
+.hovedtekst {
+    color: #040303;
+    font-size: 15px;
+    line-height: 1.5;
+    padding-left: 20px;
+    display: block;
+    /* Legger til fade-in */
+    animation: fadeIn 8.0s ease;
+}
+
+.container {
+    max-width: 100%; /* Ikke for bred */
+    width: 90%; 
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 20px; /* Runde hjørner */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Skygge */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* Legger til fade-in */
+    animation: fadeIn 1.5s ease-in forwards;
+}
+.bilde-galleri {
+    display: flex;
+    flex-wrap: wrap; /* Sørger for at bildene brytes på små skjermer */
+    justify-content: center; ;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dynamisk kolonnebredde */
+    gap: 20px; /* Avstand mellom bildene */
+    max-width: 1000%;
+}
+
+.bilde-container {
+    display: block; /* Fjern flexbox, slik at bildet og teksten ikke justeres vertikalt */
+    width: 300px; /* Gir bildene en fast bredde */
+    text-align: center; /* Sentrerer bildetekst */
+}
+
+
+.bilde-container img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+p {
+    max-width: 800px; /* Hindrer at teksten strekker seg for bredt */
+    margin: 0 auto; /* Sentrerer teksten */
+}
+
+video {
+    width: 50%;
+    max-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
