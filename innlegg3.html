@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" type = "text/css" href = "tokyo2.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isaks reiseblogg</title>
+    <style>
+    body {
+        margin: 0;
+        background-color: black;
+    }
+
+    .ball {
+        width: 40px;
+        height: 40px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+</head>
+<body>
+<div class="ball"></div>
+
+<script>
+        const ball = document.querySelector(".ball");
+        let x = 100, y = 100; // Startposisjon
+        let dx = 4, dy = 4; // Fart i x- og y-retning
+
+        function animate() {
+            const maxX = window.innerWidth - ball.clientWidth;
+            const maxY = window.innerHeight - ball.clientHeight;
+
+            x += dx;
+            y += dy;
+
+            // Sjekk kollisjon med vegger
+            if (x <= 0 || x >= maxX) dx *= -1; // Endre retning på X-aksen
+            if (y <= 0 || y >= maxY) dy *= -1; // Endre retning på Y-aksen
+
+            ball.style.left = x + "px";
+            ball.style.top = y + "px";
+
+            requestAnimationFrame(animate);
+        }
+
+        animate(); // Start animasjonen
+    </script>
+    <nav>
+        <ul>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="innlegg1.html">Innlegg 1</a></li>
+             <li><a href="innlegg2.html">Innlegg 2</a></li>
+             <li><a href="innlegg3.html">Innlegg 3</a></li>
+
+          <!--  <li><a href="kontakt.html">Kontakt</a></li> -->
+        </ul>
+    </nav>
+    <div class = "parallax">
+    <div class="container">
+        <h1>2 weeks in! Vi reiser rundt!!</h1>
+    
+    <br>
+    <div class="hovedtekst">
+    <p> Jeg tester ut en ny måte å sette opp bloggen på, og har brukt noen nye farger for å gjøre det litt mer spennende. Håper dere liker det!</p>
+    </div>
+    <div class="paragraf-container">
+    <p>Hei bloggen, jeg vet jeg ikke har delt noe på en stund, Life happened.
+    Den siste uken har bydd på veldig mye, blant annet mange møter med fremmede, ofte på intime barer hvor det ikke er så mange andre steder å kikke enn på hverandre. Blant annet ble vi kjent med en solo-reisende dame fra Paris, en 50 år gammel japansk dame og mannen hennes, bartendere på forskjellige steder, en japansk event-arrangør, en russisk ai-utvikler og et ivrig turist-par fra Tyskland.
+    Vi har dratt på dagsturer i Tokyo til shoppingstrøk og rundt i nærområdet og dratt på izakayaer og barer om kveldene. Vi prøvde også en sento, et offentlig badested med forskjellige boblebad hvor jeg får følt meg ekte mann sammen med masse japanske menn. Disse slags badene står visst veldig sterkt i kulturen, og det er skikkelig mange uskrevne regler om hvordan man skal oppføre seg og hvilken rekkefølge man skal dusje, gå i badstue, plassere håndkler på hodet og respektere alle til enhver tid.
+    </p>
+    <p>Jeg har gjort meg mange morsomme observasjoner på turen; hvis man steller seg opp et tilfeldig sted i turistområder, vil det begynne å forme seg en kø bak en. Det finnes separat fottøy til toalettet og andre innearealer i japanske hus. Det er så lite med plass i Tokyo at biler er squeeza inn i alle kriker og kroker i de små nabolagene, og hvis man har sykkel må man ha betalt for parkeringsplass til den. Det finnes fullautomatiske restauranter med Running sushi hvor du fra du kommer inn til du drar ikke får øye på en eneste person som jobber på stedet. Man har ikke vært late med å designe løsninger for det offentlige rom, og de elsker gimmicky design. Vi har for eksempel opplevd minst 6 forskjellige tilganger til hva man skal gjøre med sin våte paraply før man går inn på en butikk: paraplyhoteller som låser den utenfor butikken, paraplyhåndkler man kan tørke paraplyen på, paraplyformede poser man trer rundt om paraplyen osv osv…
+    </p>
+    </div>
+    <div class="paragraf-container">
+    <p>Vi har nå begitt oss ut på en 10-dagers reise rundt i Japan, med første stopp i yamanouchi-fjellene på en ryokan (tradisjonelt spahotell) som jeg ga til sigga i julegave. Denne lille byen er den eneste i verden som har aper som bader i varmekilder i området, som blant annet gjør byen til en populær turistattraksjon (det er også her huset fra spirited away befinner seg). Vi tilbringer et knapt døgn her med den eldre damen som driver stedet og noen få andre gjester, før turen går videre med Shinkansen mot Kanazawa, Japans 8. største by, på vestkysten i Japan. Denne byen minner om København i folketall, og har masse kulturarv (samuraier og ninjaer-type vibe). Vi bor på et flott vestlig hotell med hotellfrokost og tester nattelivet ved å bar crawle litt rundt. Vi prøvde alt fra karaokebar til restaurant i ett 4 kvadratmeters skur til en old money bar (boom). Nice by! </p>
+    <p>Etter Kanazawa reiste vi 45 minutter mot en landsby i fjellene, hvor vi vil bo på et slags fancy-design hostell, hvor det viste seg å kun være èn annen gjest, som tilfeldigvis var dansker, som vi ender med å tilbringe to dager med her ute på landet. Han er kokk på en restaurant som heter Jordnær, og forteller om hvordan det er å jobbe som mcihelinkokk med de kanskje mest intense arbeidsforholdene i danmark. Han er også like gammel som meg. Imponerende! Om kvelden lager han dansk mat, hvor det kommer gjester fra landsbyen og spiser med. Vi drikker vin og øl, men går i seng innen kl 10. Her har vi masser av tid til å nyte omgivelsene og slappe av, men det er dessverre meldt regn hele tiden mens vi er her. Jeg benytter muligheten til å skrive blogginnlegg, siden den siste uka har vært så travel at jeg ikke har rukket å skrive noe. Deretter drar vi inn til nærmeste by med taxi og prøver å dra på en onsen, men i resepsjonen til den beryktede onsennen sitter en gammel dame som vil ha oss til et helt annet offentlig bad, fordi de ikke har noen fler shampoo-flasker å selge. Hun snakker kun japansk, og vi forstår ikke helt greia, men da hun setter ut på reise ut av bygget og veiver oss med, følger vi etter. Det føles som den rareste side-questen. Vi kommer til en annen onsen, og her er snakkes det ikke et ord engelsk av de eldre damene som sitter i denne resepsjonen heller. MEEEEn, de har forberedt seg godt på akkurat denne situasjonen, fordi skranken er utstyrt med en touchskjerm og en mikrofon, hvor man kan snakke på engelsk inn i mikrofonen som så oversetter in real time til japansk. Vi sier «Onsen for 3 please». De peker mot en billettautomat hvor man kjøper oasen-billett. Husker du det jeg skrev tidligere om hvordan de har tatt designmessig stilling til alle slags situasjoner? Her ser du enda et prakteksemplar. Vi får kjøpt både shampoo, kroppssåpe og onsen-billett ved denne maskinen, og får deretter kommet inn og bli rene og pene. 
+    </p>
+
+</div>
+<div class="hovedtekst">
+    <p>Vi jobber på siggas vlogg, og prøver å få den opp og kjøre. I mellomtiden får dere noen bilder og videoer vi har tatt siden sist 😁 </p>
+    </div>
+ 
+
+<div class="bilde-galleri">
+    <div class="bilde-container">
+        <img src="abe.jpeg" alt="Her kommer koffertene inn fra regnet">
+    </div>
+    <div class="bilde-container">
+        <img src="bad.jpeg" alt="Funnet på butikken">
+    </div>
+    
+    <div class="bilde-container">
+        <img src="bite.jpeg" alt="Utsikt fra inngangen av leiligheten 2">
+    </div>
+    <div class="bilde-container">
+        <img src="elven.jpeg" alt="Utsikt fra inngangen av leiligheten 2">
+    </div>
+    <div class="bilde-container">
+        <img src="elven2.jpeg" alt="Utsikt fra inngangen av leiligheten 2">
+    </div>
+    <div class="bilde-container">
+        <img src="lange.jpeg" alt="Utsikt fra inngangen av leiligheten 2">
+    </div>
+    <div class="bilde-container">
+        <img src="nudler.jpeg" alt="Utsikt fra inngangen av leiligheten 2">
+    </div>
+    <div class="bilde-container">
+        <img src="potet.jpeg" alt="Utsikt fra inngangen av leiligheten 2">
+    </div>
+    <div class="bilde-container">
+        <img src="skur.jpeg" alt="Utsikt fra inngangen av leiligheten 2">
+    </div>
+    <div class="bilde-container">
+        <img src="snack.jpeg" alt="Utsikt fra inngangen av leiligheten 2">
+    </div>
+    <div class="bilde-container">
+        <img src="yama.jpg" alt="Utsikt fra inngangen av leiligheten 2">
+     </div>
+     <div class="bilde-container">
+        <img src="turtle.jpg" alt="Utsikt fra inngangen av leiligheten 2">
+     </div>
+     <div class="bilde-container">
+        <img src="street.jpg" alt="Utsikt fra inngangen av leiligheten 2">
+     </div>
+     <div class="bilde-container">
+        <img src="sick.jpg" alt="Utsikt fra inngangen av leiligheten 2">
+     </div>
+     <div class="bilde-container">
+        <img src="drage.jpg" alt="Utsikt fra inngangen av leiligheten 2">
+     </div>
+     <div class="bilde-container">
+        <img src="birds.jpg" alt="Utsikt fra inngangen av leiligheten 2">
+     </div>
+     <div class="bilde-container">
+        <img src="awkward.jpg" alt="Utsikt fra inngangen av leiligheten 2">
+     </div>
+     <div class="bilde-container">
+        <img src="anime.jpg" alt="Utsikt fra inngangen av leiligheten 2">
+     </div>
+    
+</div>
+<video controls width="600">
+    <source src="snø.mp4" type="video/mp4">
+    Din nettleser støtter ikke video-taggen.
+</video>
+<video controls width="600">
+    <source src="ber.mp4" type="video/mp4">
+    Din nettleser støtter ikke video-taggen.
+</video>
+<video controls width="600">
+<source src="monkey.mp4" type="video/mp4">
+Din nettleser støtter ikke video-taggen.
+</video>
+</div>
+</div>
+</body>
+</html>
