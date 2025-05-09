@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;500&display=swap');
 
+/* Universal styling */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Quicksand', sans-serif;
     margin: 0;
@@ -22,9 +27,9 @@ nav {
     padding: 10px;
     text-align: center;
     position: fixed;
-    top: 0; 
-    left: 0; 
-    width: 100%; 
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1002;
     backdrop-filter: blur(10px);
 }
@@ -36,7 +41,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 15px;
 }
 
@@ -60,13 +65,26 @@ h1 {
     animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Fade-in animasjon */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-/* Bildegalleri */
+/* Tekstinnhold */
+.hovedtekst,
+.paragraf-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    color: #ffffffcc;
+    text-align: left;
+}
+
+/* Galleri */
 .bilde-galleri {
     display: flex;
     flex-wrap: wrap;
@@ -74,37 +92,18 @@ h1 {
     gap: 20px;
     padding: 30px;
     max-width: 1000px;
-}
-
-.hovedtekst{
-    font-size: 17px;
-    color: #ffffff94;
-    margin: 20px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.15);
-    border-radius: 20px;
-    backdrop-filter: blur(8px);
-    
+    width: 100%;
 }
 
 .bilde-container {
     width: 200px;
+    flex: 1 1 200px;
 }
 
 .bilde-container img {
     width: 100%;
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Hovedtekst og paragrafer */
-.hovedtekst, .paragraf-container {
-    max-width: 800px;
-    margin: 20px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.15);
-    border-radius: 20px;
-    backdrop-filter: blur(8px);
 }
 
 /* Skyer */
@@ -117,7 +116,8 @@ h1 {
     z-index: 0;
 }
 
-.cloud::after, .cloud::before {
+.cloud::after,
+.cloud::before {
     content: '';
     position: absolute;
     background: white;
@@ -167,7 +167,7 @@ h1 {
     100% { transform: translateX(120vw); }
 }
 
-/* Måneglød */
+/* Solglød */
 .sun {
     width: 100px;
     height: 100px;
@@ -189,5 +189,34 @@ h1 {
     100% {
         transform: scale(1.2);
         box-shadow: 0 0 120px rgba(255, 228, 250, 1);
+    }
+}
+
+/* RESPONSIVE STILER */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .bilde-container {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .hovedtekst, .paragraf-container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .sun {
+        width: 70px;
+        height: 70px;
+        top: 15px;
+        right: 15px;
     }
 }
