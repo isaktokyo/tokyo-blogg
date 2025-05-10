@@ -82,9 +82,74 @@ h1 {
 }
 
 .bilde-container {
-    flex: 1 1 150px;
-    max-width: 200px;
+    flex: 1 1 200px;
+    max-width: 220px;
+    box-sizing: border-box;
 }
 
 .bilde-container img {
-    width:
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Video */
+video {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+/* Sol-effekt */
+.sun {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #fffaf0, #f8c8dc);
+    border-radius: 50%;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    box-shadow: 0 0 90px rgba(255, 228, 250, 0.8);
+    animation: sunGlow 4s infinite alternate;
+    z-index: 1001;
+}
+
+@keyframes sunGlow {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 90px rgba(255, 228, 250, 0.8);
+    }
+    100% {
+        transform: scale(1.2);
+        box-shadow: 0 0 120px rgba(255, 228, 250, 1);
+    }
+}
+
+/* Mobilvennlig justering */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hovedtekst, .paragraf-container {
+        font-size: 15px;
+        padding: 15px;
+    }
+
+    .bilde-container {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+
+    .bilde-galleri {
+        gap: 10px;
+    }
+}
