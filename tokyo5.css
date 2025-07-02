@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;500&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Container for video */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Video styling */
+video {
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+/* Optional: header with elegant font */
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 42px;
+  margin-bottom: 30px;
+  color: #eee;
+}
